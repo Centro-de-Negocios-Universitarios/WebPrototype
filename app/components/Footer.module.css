@@ -1,0 +1,133 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 60px 40px 40px;
+    margin-top: 100px;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 0;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--cnu-red);
+    margin-bottom: 12px;
+}
+
+.tagline {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: 280px;
+}
+
+.languageSelector {
+    margin-bottom: 16px;
+}
+
+.languageDropdown {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+    color: var(--foreground);
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.languageDropdown:focus {
+    border-color: var(--cnu-red);
+}
+
+.socialIcons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.socialIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #0891b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+    background-color: #0e7490;
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.copyright {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footerTitle {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--foreground);
+}
+
+.footerLink {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+    color: var(--foreground);
+    opacity: 1;
+}
+
+.footerBottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.footerTagline {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 24px 24px;
+    }
+
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tagline {
+        max-width: 100%;
+    }
+}

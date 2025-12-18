@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -8,7 +9,15 @@ export default function Footer() {
                 <div className={styles.footerGrid}>
                     {/* Primera columna: Logo y redes sociales */}
                     <div className={styles.footerColumn}>
-                        <div className={styles.logo}>CNU</div>
+                        <div className={styles.logo}>
+                            <Image
+                                src="/Centro_de_Negocios_Universitario.png"
+                                alt="Centro de Negocios Universitario"
+                                width={60}
+                                height={60}
+                                className={styles.logoImage}
+                            />
+                        </div>
                         <p className={styles.tagline}>
                             The easy way to create stunning videos, add subtitles and grow your audience.
                         </p>

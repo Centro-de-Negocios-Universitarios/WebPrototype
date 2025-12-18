@@ -7,10 +7,14 @@
   --text-muted: #666666;
   --border-color: #e5e5e5;
 
-  /* Colores institucionales */
-  --primary: #f4c430;
-  --secondary: #e63946;
-  --cnu-red: #c41e3a;
+  /* Colores institucionales CNU - Paleta oficial */
+  --cnu-yellow: #FFF389;
+  --cnu-coral: #FF837D;
+  --cnu-blue: #AAC5FF;
+
+  /* Alias para compatibilidad */
+  --primary: var(--cnu-yellow);
+  --secondary: var(--cnu-coral);
 
   /* Espaciado */
   --max-width: 1200px;

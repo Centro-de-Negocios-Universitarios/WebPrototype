@@ -17,7 +17,16 @@
     font-size: 24px;
     color: var(--cnu-red);
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
 }
+
+.logoImage {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+
 
 .nav {
     display: flex;
@@ -55,11 +64,49 @@
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 16px 24px;
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .logoImage {
+        height: 35px;
     }
 
     .nav {
-        gap: 20px;
-        font-size: 13px;
+        order: 2;
+        gap: 12px;
+        font-size: 11px;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navLink {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+
+    .logoImage {
+        height: 30px;
+    }
+
+    .nav {
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .navLink {
+        font-size: 10px;
     }
 }

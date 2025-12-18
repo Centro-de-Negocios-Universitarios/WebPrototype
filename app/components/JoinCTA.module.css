@@ -1,0 +1,45 @@
+.section {
+    background-color: var(--cnu-blue);
+    padding: 60px 0 80px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-x);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: var(--cnu-coral);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 18px 60px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 131, 125, 0.3);
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #ff6b64;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 131, 125, 0.4);
+    opacity: 1;
+}
+
+.button:active {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 1.25rem;
+        padding: 14px 40px;
+    }
+}

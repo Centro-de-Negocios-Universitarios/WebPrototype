@@ -16,8 +16,19 @@ export default function WhoWeArePage() {
                 </p>
 
                 <div className={styles.cards}>
-                    <div className={styles.cardYellow}></div>
-                    <div className={styles.cardRed}></div>
+                    <div className={styles.cardYellow}>
+                        <h2 className={styles.cardTitle}>MISIÓN</h2>
+                        <p className={styles.cardText}>
+                            Formar...
+                        </p>
+                    </div>
+
+                    <div className={styles.cardRed}>
+                        <h2 className={styles.cardTitle}>VISIÓN</h2>
+                        <p className={styles.cardText}>
+                            Ir más allá...
+                        </p>
+                    </div>
                 </div>
             </main>
 

@@ -33,6 +33,14 @@
     width: 571px;
     height: 551px;
     border-radius: 57px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
 }
 
 .cardYellow {
@@ -41,4 +49,23 @@
 
 .cardRed {
     background-color: var(--cnu-coral);
+}
+
+.cardTitle{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    max-width: 337px;
+    margin-bottom: 24px;
+
+    color: var(--foreground);
+}
+
+.cardText {
+    max-width: 337px;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: var(--foreground);
 }

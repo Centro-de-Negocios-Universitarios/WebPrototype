@@ -30,6 +30,8 @@ export default function WhoWeArePage() {
                         </p>
                     </div>
                 </div>
+
+                <div className={styles.largeCard}></div>
             </main>
 
             <Footer />

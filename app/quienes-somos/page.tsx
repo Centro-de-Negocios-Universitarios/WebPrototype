@@ -31,7 +31,17 @@ export default function WhoWeArePage() {
                     </div>
                 </div>
 
-                <div className={styles.largeCard}></div>
+                <div className={styles.largeCard}>
+                    <div className={styles.largeCardContent}>
+
+                    <div className={styles.leftColumn}>
+                            <div className={styles.imagePlaceholder}></div>
+                        <h2></h2>
+                    </div>
+
+                    <div className={styles.rightColumn}></div>
+                    </div>
+                </div>
             </main>
 
             <Footer />

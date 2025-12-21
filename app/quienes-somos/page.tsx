@@ -60,7 +60,22 @@ export default function WhoWeArePage() {
                     </div>
                     </div>
                 </div>
+                
             </main>
+
+            <div className={styles.yellowBanner}>
+                <div className={styles.marquee}>
+                    <div className={styles.marqueeTrack}>
+                        <span>¡HEY, EMPRENDAMOS!</span>
+                        <span>¡HEY, EMPRENDAMOS!</span>
+                        <span>¡HEY, EMPRENDAMOS!</span>
+
+                        <span>¡HEY, EMPRENDAMOS!</span>
+                        <span>¡HEY, EMPRENDAMOS!</span>
+                        <span>¡HEY, EMPRENDAMOS!</span>
+                    </div>
+                </div>
+            </div>
 
             <Footer />
         </>

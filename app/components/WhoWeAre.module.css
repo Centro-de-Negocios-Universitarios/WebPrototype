@@ -69,3 +69,12 @@
 
     color: var(--foreground);
 }
+
+.largeCard{
+  width: 1285px;
+  height: 833px;
+  background-color: var(--cnu-blue);
+  border-radius: 67px;
+
+  margin: 100px auto 0;
+}

@@ -87,3 +87,15 @@
   left: 50%;
   transform:translateX(-50%);
 }
+
+.imagePlaceholder {
+  width:573px;
+  height: 428px;
+
+  background-color: #71737C;
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

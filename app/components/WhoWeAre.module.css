@@ -27,6 +27,10 @@
 
     width: 1285px;
     margin: 80px auto 0;
+
+    position: relative;
+    left: 50%;
+    transform:translateX(-50%)
 }
 
 .cardYellow,
@@ -77,5 +81,9 @@
   background-color: var(--cnu-blue);
   border-radius: 67px;
 
-  margin: 100px auto 0;
+  margin-top: 100px;
+
+  position: relative;
+  left: 50%;
+  transform:translateX(-50%);
 }

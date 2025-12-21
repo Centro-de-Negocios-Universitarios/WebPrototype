@@ -41,7 +41,23 @@ export default function WhoWeArePage() {
                         </h2>
                     </div>
 
-                    <div className={styles.rightColumn}></div>
+                    <div className={styles.rightColumn}>
+                        <p className={styles.largeCardText}>
+                        La universidad es el único momento <br />
+                        en que tienes tiempo, recursos y <br />
+                        libertad para equivocarte sin que te <br />
+                        cueste una fortuna. El <br />
+                        emprendimiento y los negocios te <br />
+                        enseñan a crear valor y a no <br />
+                        depender de nadie; las actividades <br />
+                        extracurriculares te dan liderazgo y <br />
+                        una red que ningún título iguala. <br />
+                        Juntos te convierten en el <br />
+                        profesionista que todos quieren <br />
+                        contratar… o en quien los contrata. <br />
+                        Aprovéchalo ahora.
+                        </p>
+                    </div>
                     </div>
                 </div>
             </main>

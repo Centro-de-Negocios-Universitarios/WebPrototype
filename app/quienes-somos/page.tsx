@@ -36,7 +36,9 @@ export default function WhoWeArePage() {
 
                     <div className={styles.leftColumn}>
                             <div className={styles.imagePlaceholder}></div>
-                        <h2></h2>
+                        <h2 className={styles.largeCardTitle}>
+                            NEGOCIOS EN LA COMUNIDAD UNIVERSITARIA
+                        </h2>
                     </div>
 
                     <div className={styles.rightColumn}></div>

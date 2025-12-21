@@ -77,6 +77,56 @@ export default function WhoWeArePage() {
                 </div>
             </div>
 
+            <section className={styles.impactSection}>
+                <h2 className={styles.impactTitle}>IMPACTO</h2>
+            </section>
+            
+            <div className={styles.impactWrapper}>
+            <button className={styles.arrowButton}>‹</button>            
+                <div className={styles.impactCards}>
+                    
+                    <div className={styles.impactCard}>
+                        <div className={styles.impactImage}></div>
+
+                        <p className={styles.impactText}>
+                            "En el CNU aprendi el valor real del trabajo en equipo y la importancia 
+                            de una buena organización"
+                        </p>
+
+                        <span className={styles.impactAuthor}>
+                            Tamal de mole, 2025
+                        </span>
+                    </div>
+
+                    <div className={styles.impactCard}>
+                        <div className={styles.impactImage}></div>
+
+                        <p className={styles.impactText}>
+                            "En el CNU aprendi el valor real del trabajo en equipo y la importancia 
+                            de una buena organización"
+                        </p>
+
+                        <span className={styles.impactAuthor}>
+                            Tamal de mole, 2025
+                        </span>
+                    </div>
+
+                    <div className={styles.impactCard}>
+                        <div className={styles.impactImage}></div>
+
+                        <p className={styles.impactText}>
+                            "En el CNU aprendi el valor real del trabajo en equipo y la importancia 
+                            de una buena organización"
+                        </p>
+
+                        <span className={styles.impactAuthor}>
+                            Tamal de mole, 2025
+                        </span>
+                    </div>
+                </div>
+
+                <button className={styles.arrowButton}>›</button>
+            </div>
             <Footer />
         </>
 

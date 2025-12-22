@@ -45,13 +45,13 @@ export default function Navbar() {
                 <Link href="/quienes-somos" className={styles.navLink} onClick={closeMenu}>
                     ¿Quiénes somos?
                 </Link>
-                <Link href="/equipo" className={styles.navLink} onClick={closeMenu}>
+                <Link href="/nuestro-equipo" className={styles.navLink} onClick={closeMenu}>
                     Nuestro Equipo
                 </Link>
                 <Link href="/proyectos" className={styles.navLink} onClick={closeMenu}>
                     Proyectos
                 </Link>
-                <Link href="/unete" className={styles.navLink} onClick={closeMenu}>
+                <Link href="/unete-al-equipo" className={styles.navLink} onClick={closeMenu}>
                     Únete al Equipo
                 </Link>
             </nav>

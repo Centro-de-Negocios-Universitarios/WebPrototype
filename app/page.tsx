@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Hero from "./components/home/Hero";
 import ProjectsInProgress from "./components/ProjectsInProgress";
-import FeaturedProjects from "./components/FeaturedProjects";
-import Timeline from "./components/Timeline";
+import FeaturedProjects from "./components/home/FeaturedProjects";
+import Timeline from "./components/home/Timeline";
 import JoinCTA from "./components/JoinCTA";
 import Footer from "./components/Footer";
 

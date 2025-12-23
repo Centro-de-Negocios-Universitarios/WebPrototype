@@ -1,0 +1,23 @@
+.main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 100px var(--padding-x);
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    color: var(--foreground);
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+}

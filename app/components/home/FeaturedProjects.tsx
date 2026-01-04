@@ -11,7 +11,7 @@ export default function FeaturedProjects() {
         {
             title: "BAW",
             description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            image: "/featured-2.jpg"
+            image: "/BAW.jpeg"
         },
         {
             title: "Semana DIMEI",
@@ -29,9 +29,13 @@ export default function FeaturedProjects() {
                     {projects.map((project, index) => (
                         <div key={index} className={styles.projectCard}>
                             <div className={styles.imageWrapper}>
-                                <div className={styles.imagePlaceholder}>
-                                    <span>📸</span>
-                                </div>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={600}
+                                    height={400}
+                                    className={styles.projectImage}
+                                />
                             </div>
                             <div className={styles.content}>
                                 <h3 className={styles.projectTitle}>{project.title}</h3>

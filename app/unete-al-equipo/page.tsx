@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import JoinCTA from "../components/JoinCTA";
+import RecruitmentForm from "../components/RecruitmentForm";
 import styles from "./page.module.css";
 
 export default function UneteAlEquipoPage() {
@@ -9,16 +9,14 @@ export default function UneteAlEquipoPage() {
             <Navbar />
 
             <main className={styles.main}>
-                <h1 className={styles.title}>Únete al Equipo</h1>
+                <h1 className={styles.title}>¡ÚNETE AL EQUIPO!</h1>
 
                 <p className={styles.description}>
                     ¿Te gustaría formar parte del Centro de Negocios Universitario?
-                    Conoce cómo puedes unirte a nuestro equipo.
+                    Conoce nuestras áreas de trabajo y postúlate para unirte a nuestro equipo.
                 </p>
 
-                <JoinCTA />
-
-                {/* TODO: Agregar formulario o proceso de reclutamiento */}
+                <RecruitmentForm />
             </main>
 
             <Footer />

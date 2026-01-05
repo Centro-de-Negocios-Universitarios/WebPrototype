@@ -6,9 +6,9 @@ export default function Hero() {
         <section className={styles.hero}>
             <div className={styles.container}>
                 <h1 className={styles.title}>
-                    Anyone can make a great video.
+                    Las ideas nacen aquí. Los proyectos crecen contigo.
                     <br />
-                    <span className={styles.subtitle}>That means you.</span>
+                    <span className={styles.subtitle}>Un espacio donde las ideas de estudiantes se transforman en proyectos con propósito</span>
                 </h1>
 
                 <div className={styles.imageWrapper}>
@@ -24,7 +24,7 @@ export default function Hero() {
                 <p className={styles.description}>
                     El Centro de Negocios Universitario es una agrupación estudiantil que
                     constantemente busca innovar en nuevos proyectos, con la finalidad de que los miembros desarrollen y
-                    fortalezcan habilidades blandas y duras.
+                    fortalezcan habilidades blandas y duras, y así puedan crecer tanto en el aspecto personal, como en el profesional y académico.
                 </p>
             </div>
         </section>

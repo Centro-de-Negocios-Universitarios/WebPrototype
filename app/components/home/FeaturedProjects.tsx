@@ -16,7 +16,7 @@ export default function FeaturedProjects() {
         {
             title: "Semana DIMEI",
             description: "Un evento anual en el que se presentan proyectos, exposiciones, hitos y demás actividades de vinculación académica y profesional. El CNU participa en algunas de estas categorías, asegurándose de mantener un vínculo constante tanto con la comunidad estudiantil como con el sector empresarial.",
-            image: "/Eventos.jpg"
+            image: "/Eventos.JPG"
         },
     ];
 

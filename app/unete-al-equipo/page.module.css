@@ -1,23 +1,60 @@
+/* Mobile First */
 .main {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 100px var(--padding-x);
+    padding: 60px 20px;
     text-align: center;
 }
 
 .title {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
     line-height: 1.3;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     color: var(--foreground);
 }
 
 .description {
     max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-muted);
-    margin-bottom: 60px;
+    padding: 0 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .main {
+        padding: 80px 40px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 28px;
+    }
+
+    .description {
+        font-size: 1.05rem;
+        margin-bottom: 50px;
+        line-height: 1.7;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .main {
+        padding: 100px var(--padding-x);
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-bottom: 32px;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        margin-bottom: 60px;
+        line-height: 1.8;
+    }
 }

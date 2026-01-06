@@ -5,18 +5,18 @@ export default function FeaturedProjects() {
     const projects = [
         {
             title: "Feria de las Agrupaciones",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-            image: "/featured-1.jpg"
+            description: "Un evento anual en el que el CNU participa con el objetivo de darse a conocer ante la comunidad, presentando tanto sus nuevos proyectos como sus procesos de reclutamiento.",
+            image: "/InterAgrupaciones.JPG"
         },
         {
             title: "BAW",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            image: "/featured-2.jpg"
+            description: "Business Apprentice War, el proyecto insignia del CNU, es un evento que busca incentivar a la comunidad a emprender de manera segura, brindándoles un seguimiento personalizado a sus propuestas a través de una serie de talleres enfocados en áreas clave de la creación de un negocio.",
+            image: "/BAW.jpeg"
         },
         {
             title: "Semana DIMEI",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            image: "/featured-3.jpg"
+            description: "Un evento anual en el que se presentan proyectos, exposiciones, hitos y demás actividades de vinculación académica y profesional. El CNU participa en algunas de estas categorías, asegurándose de mantener un vínculo constante tanto con la comunidad estudiantil como con el sector empresarial.",
+            image: "/Eventos.JPG"
         },
     ];
 
@@ -29,9 +29,13 @@ export default function FeaturedProjects() {
                     {projects.map((project, index) => (
                         <div key={index} className={styles.projectCard}>
                             <div className={styles.imageWrapper}>
-                                <div className={styles.imagePlaceholder}>
-                                    <span>📸</span>
-                                </div>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={600}
+                                    height={400}
+                                    className={styles.projectImage}
+                                />
                             </div>
                             <div className={styles.content}>
                                 <h3 className={styles.projectTitle}>{project.title}</h3>

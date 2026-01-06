@@ -44,12 +44,15 @@
     font-size: 14px;
     color: var(--foreground);
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 .navLink:hover {
-    color: var(--cnu-red);
+    color: var(--foreground);
+    background-color: rgba(255, 131, 125, 0.1);
     opacity: 1;
 }
 
@@ -58,14 +61,16 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--cnu-red);
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cnu-coral);
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 .navLink:hover::after {
-    width: 100%;
+    width: 60%;
 }
 
 /* Hamburger Button - Hidden on desktop */
@@ -150,11 +155,17 @@
 
     .navLink {
         font-size: 16px;
-        padding: 16px 0;
+        padding: 16px 12px;
         width: 100%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         opacity: 0;
         animation: fadeInSlide 0.4s ease forwards;
+        border-radius: 8px;
+    }
+
+    /* Active/Tap state for mobile */
+    .navLink:active {
+        background-color: rgba(255, 131, 125, 0.15);
     }
 
     /* Stagger animation for menu items */

@@ -1,12 +1,13 @@
+import Link from "next/link";
 import styles from "./JoinCTA.module.css";
 
 export default function JoinCTA() {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <a href="#contact" className={styles.button}>
+                <Link href="/unete-al-equipo" className={styles.button}>
                     ¡ÚNETE!
-                </a>
+                </Link>
             </div>
         </section>
     );

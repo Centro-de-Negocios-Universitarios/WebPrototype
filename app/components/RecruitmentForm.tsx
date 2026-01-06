@@ -5,13 +5,6 @@ import styles from "./RecruitmentForm.module.css";
 
 export default function RecruitmentForm() {
     const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
-    const [formData, setFormData] = useState({
-        nombre: "",
-        carrera: "",
-        facultad: "",
-        correo: "",
-        area: ""
-    });
 
     const areas = [
         {
@@ -42,20 +35,6 @@ export default function RecruitmentForm() {
 
     const handleNextArea = () => {
         setCurrentAreaIndex((prev) => (prev === areas.length - 1 ? 0 : prev + 1));
-    };
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Form submitted:", formData);
-        // Aquí el backend manejará el envío de datos
-        alert("¡Formulario enviado! Pronto nos pondremos en contacto contigo.");
     };
 
     const currentArea = areas[currentAreaIndex];
@@ -105,70 +84,19 @@ export default function RecruitmentForm() {
                 ))}
             </div>
 
-            {/* Registration Form */}
+            {/* Google Forms Embed */}
             <div className={styles.formWrapper}>
                 <h2 className={styles.formTitle}>REGISTRO</h2>
 
-                <form onSubmit={handleSubmit} className={styles.form}>
-                    <input
-                        type="text"
-                        name="nombre"
-                        placeholder="Nombre completo"
-                        value={formData.nombre}
-                        onChange={handleInputChange}
-                        className={styles.input}
-                        required
-                    />
-
-                    <input
-                        type="text"
-                        name="carrera"
-                        placeholder="Carrera"
-                        value={formData.carrera}
-                        onChange={handleInputChange}
-                        className={styles.input}
-                        required
-                    />
-
-                    <input
-                        type="text"
-                        name="facultad"
-                        placeholder="Facultad"
-                        value={formData.facultad}
-                        onChange={handleInputChange}
-                        className={styles.input}
-                        required
-                    />
-
-                    <input
-                        type="email"
-                        name="correo"
-                        placeholder="Correo electrónico"
-                        value={formData.correo}
-                        onChange={handleInputChange}
-                        className={styles.input}
-                        required
-                    />
-
-                    <select
-                        name="area"
-                        value={formData.area}
-                        onChange={handleInputChange}
-                        className={styles.select}
-                        required
+                <div className={styles.iframeContainer}>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScmqpzFGkTZNkBD-ODgrjSL85X1DjWNUed-8wGM0-L5-NRbEA/viewform?embedded=true"
+                        className={styles.googleForm}
+                        title="Formulario de registro CNU"
                     >
-                        <option value="">Selecciona un área</option>
-                        {areas.map((area, index) => (
-                            <option key={index} value={area.name}>
-                                {area.name} - {area.position}
-                            </option>
-                        ))}
-                    </select>
-
-                    <button type="submit" className={styles.submitButton}>
-                        ENVIAR
-                    </button>
-                </form>
+                        Cargando…
+                    </iframe>
+                </div>
             </div>
         </div>
     );

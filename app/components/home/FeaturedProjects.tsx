@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
         {
             title: "Feria de las Agrupaciones",
             description: "Un evento anual en el que el CNU participa con el objetivo de darse a conocer ante la comunidad, presentando tanto sus nuevos proyectos como sus procesos de reclutamiento.",
-            image: "/InterAgrupaciones.jpg"
+            image: "/InterAgrupaciones.JPG"
         },
         {
             title: "BAW",

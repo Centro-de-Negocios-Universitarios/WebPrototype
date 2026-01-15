@@ -14,7 +14,16 @@ export default function NuestroEquipoPage() {
                     Conoce a las personas que hacen posible el Centro de Negocios Universitario.
                 </p>
 
-                {/* TODO: Agregar contenido del equipo */}
+                <div className={styles.constructionContainer}>
+                    <div className={styles.constructionIcon}>🚧</div>
+                    <h2 className={styles.constructionTitle}>Página en Construcción</h2>
+                    <p className={styles.constructionText}>
+                        ¡Estamos trabajando en esta sección para mostrarte al increíble equipo del CNU!
+                        <br />
+                        Muy pronto podrás conocer a todas las personas que hacen posible nuestros proyectos.
+                    </p>
+                    <p className={styles.constructionEmoji}>⚡ Vuelve pronto ⚡</p>
+                </div>
             </main>
 
             <Footer />

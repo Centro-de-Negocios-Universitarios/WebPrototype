@@ -1,31 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./RecruitmentForm.module.css";
 
 export default function RecruitmentForm() {
     const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
 
     const areas = [
         {
             name: "TECNOLOGÍA",
-            position: "PROGRAMADOR (A) FULL",
-            description: "Únete a nuestro equipo de tecnología y desarrolla soluciones innovadoras. Trabajarás en proyectos web modernos utilizando tecnologías de vanguardia como React, Next.js y más. Buscamos personas apasionadas por la programación que quieran crecer profesionalmente."
+            position: "MIEMBRO EN TECNOLOGÍA",
+            description: "Es un área innovadora dedicada aldesarrollo e implementación de sistemasdigitales que facilitan las tareas del CNU ypromueve el emprendimiento a través deproyectos y capacitaciones tecnológicaspara la comunidad emprendedora."
         },
         {
-            name: "DISEÑO",
-            position: "DISEÑADOR (A) UX/UI",
-            description: "Forma parte del equipo creativo del CNU. Diseña experiencias visuales impactantes y funcionales. Trabajarás en branding, interfaces de usuario y materiales de comunicación para todos nuestros proyectos y eventos."
+            name: "OPERACIONES",
+            position: "MIEMBRO EN OPERACIONES",
+            description: "Es el área encargada de la planeación, logística y experiencia del usuario en proyectos del CNU. Sus funciones incluyen la gestión de proyectos, logística de sesiones, reconocimiento de participantes, entrega de premios y asesorías, siempre cuidando la experiencia del usuario."
         },
         {
             name: "MARKETING",
-            position: "ESPECIALISTA EN MARKETING",
-            description: "Impulsa la presencia del CNU en diferentes plataformas. Crea estrategias de contenido, gestiona redes sociales y desarrolla campañas creativas que conecten con la comunidad estudiantil y empresarial."
+            position: "MIEMBRO EN MARKETING",
+            description: "Se encarga de difundir cursos, talleres y conferencias del Centro de Negocios Universitario cada semestre para atraer personas del mercado y convertirlas en consumidores. Esto se logra identificando clientes meta, analizando sus necesidades, planificando estrategias, ejecutando actividades y controlando los avances y logros."
         },
         {
             name: "RECURSOS HUMANOS",
-            position: "COORDINADOR (A) DE RRHH",
-            description: "Gestiona el talento humano del CNU. Participa en procesos de reclutamiento, desarrollo de personal, y creación de un ambiente de trabajo colaborativo y motivador para todos los miembros."
+            position: "MIEMBRO DE RRHH",
+            description: "Se encarga de identificar el talento humano y su desempeño en el CNU, asegurando un funcionamiento óptimo y eficiente en el desarrollo de actividades, integración y crecimiento de los miembros, creando una experiencia excepcional que facilite lograr los objetivos organizacionales."
         }
     ];
 
@@ -35,6 +37,29 @@ export default function RecruitmentForm() {
 
     const handleNextArea = () => {
         setCurrentAreaIndex((prev) => (prev === areas.length - 1 ? 0 : prev + 1));
+    };
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const swipeThreshold = 50; // minimum distance for a swipe
+        const difference = touchStartX.current - touchEndX.current;
+
+        if (Math.abs(difference) > swipeThreshold) {
+            if (difference > 0) {
+                // Swiped left - next area
+                handleNextArea();
+            } else {
+                // Swiped right - previous area
+                handlePrevArea();
+            }
+        }
     };
 
     const currentArea = areas[currentAreaIndex];
@@ -51,7 +76,12 @@ export default function RecruitmentForm() {
                     ‹
                 </button>
 
-                <div className={styles.areaCard}>
+                <div
+                    className={styles.areaCard}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     <h2 className={styles.areaTitle}>
                         ÁREA: {currentArea.name}
                     </h2>
@@ -90,7 +120,7 @@ export default function RecruitmentForm() {
 
                 <div className={styles.iframeContainer}>
                     <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLScmqpzFGkTZNkBD-ODgrjSL85X1DjWNUed-8wGM0-L5-NRbEA/viewform?embedded=true"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfPw-79vNwdmLaOQ3jO0IMgZeLPqVDH80AFqFeQzRX0OQ8LvQ/viewform?embedded=true"
                         className={styles.googleForm}
                         title="Formulario de registro CNU"
                     >

@@ -14,11 +14,9 @@ export default function ProyectosPage() {
                 <p className={styles.description}>
                     Descubre los proyectos en los que estamos trabajando actualmente.
                 </p>
-
-                <ProjectsInProgress />
-
-                {/* TODO: Agregar más contenido de proyectos */}
             </main>
+
+            <ProjectsInProgress />
 
             <Footer />
         </>

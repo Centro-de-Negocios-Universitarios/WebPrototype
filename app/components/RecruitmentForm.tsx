@@ -5,37 +5,64 @@ import styles from "./RecruitmentForm.module.css";
 
 export default function RecruitmentForm() {
     const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
+    const [animationDirection, setAnimationDirection] = useState<'left' | 'right' | null>(null);
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
+
+    // Mapeo de colores por área
+    const areaColors: { [key: string]: string } = {
+        "TECNOLOGÍA": "#FF8C42", // Naranja
+        "OPERACIONES": "#9B59B6", // Morado
+        "RECURSOS HUMANOS": "#E74C3C" // Rojo
+    };
 
     const areas = [
         {
             name: "TECNOLOGÍA",
-            position: "MIEMBRO EN TECNOLOGÍA",
-            description: "Es un área innovadora dedicada aldesarrollo e implementación de sistemasdigitales que facilitan las tareas del CNU ypromueve el emprendimiento a través deproyectos y capacitaciones tecnológicaspara la comunidad emprendedora."
+            position: "DISEÑADOR UX/UI",
+            description: "Diseñar y desarrollar la estructura visual y estética de la página web con la finalidad de mantenerla actualizada, moderna y funcional. Diseñar elementos interactivos y visuales que mejoren la experiencia del usuario (formularios, menús, sliders, etc.). Realizar investigaciones de usuarios mediante encuestas, entrevistas, análisis de datos o pruebas de usabilidad."
+        },
+        {
+            name: "TECNOLOGÍA",
+            position: "PROGRAMADOR (A) FRONT-END",
+            description: "Es el encargado de diseñar, desarrollar y mantener la interfaz de usuario, garantizando que sean funcionales, atractivas y fáciles de usar."
+        },
+        {
+            name: "TECNOLOGÍA",
+            position: "PROGRAMADOR (A) BACK-END",
+            description: "Es el encargado de diseñar, desarrollar y mantener la lógica del servidor, las bases de datos y las APIs de las aplicaciones, asegurando que sean escalables, seguras y eficientes para soportar las funcionalidades del front-end."
         },
         {
             name: "OPERACIONES",
-            position: "MIEMBRO EN OPERACIONES",
-            description: "Es el área encargada de la planeación, logística y experiencia del usuario en proyectos del CNU. Sus funciones incluyen la gestión de proyectos, logística de sesiones, reconocimiento de participantes, entrega de premios y asesorías, siempre cuidando la experiencia del usuario."
+            position: "AUXILIAR DE PLANEACIÓN DE PROYECTOS",
+            description: "Planea y mantén proyectos en marcha de forma eficiente y organizada."
         },
         {
-            name: "MARKETING",
-            position: "MIEMBRO EN MARKETING",
-            description: "Se encarga de difundir cursos, talleres y conferencias del Centro de Negocios Universitario cada semestre para atraer personas del mercado y convertirlas en consumidores. Esto se logra identificando clientes meta, analizando sus necesidades, planificando estrategias, ejecutando actividades y controlando los avances y logros."
+            name: "OPERACIONES",
+            position: "AUXILIAR DE LOGÍSTICA",
+            description: "Gestiona y garantiza la ejecución de operaciones en estádares óptimos, previendo cambios inesperados."
+        },
+        {
+            name: "OPERACIONES",
+            position: "AUXILIAR DE EXPERIENCIA DEL USUARIO",
+            description: "Recopila la experiencias de los usuarios para mejorar la calidad de los procesos y servicios."
         },
         {
             name: "RECURSOS HUMANOS",
-            position: "MIEMBRO DE RRHH",
-            description: "Se encarga de identificar el talento humano y su desempeño en el CNU, asegurando un funcionamiento óptimo y eficiente en el desarrollo de actividades, integración y crecimiento de los miembros, creando una experiencia excepcional que facilite lograr los objetivos organizacionales."
+            position: "AUXILIAR DE GESTIÓN DE TALENTO",
+            description: "Persona encargada de apoyar en el reclutamiento, selección, capacitación y seguimiento de los miembros del CNU. Apoyo en el proceso de reclutamiento y selección, y onboarding de los miembros. Apoyar en las capacitaciones a los miembros del CNU Seguimiento a los miembros y áreas para DNC Apoyo en el proceso de offboarding de los miembros del CNU."
         }
     ];
 
     const handlePrevArea = () => {
+        setAnimationDirection('right');
+        setTimeout(() => setAnimationDirection(null), 500);
         setCurrentAreaIndex((prev) => (prev === 0 ? areas.length - 1 : prev - 1));
     };
 
     const handleNextArea = () => {
+        setAnimationDirection('left');
+        setTimeout(() => setAnimationDirection(null), 500);
         setCurrentAreaIndex((prev) => (prev === areas.length - 1 ? 0 : prev + 1));
     };
 
@@ -77,11 +104,18 @@ export default function RecruitmentForm() {
                 </button>
 
                 <div
-                    className={styles.areaCard}
+                    className={`${styles.areaCard} ${animationDirection === 'left' ? styles.slideLeft :
+                            animationDirection === 'right' ? styles.slideRight : ''
+                        }`}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
                 >
+                    {/* Barra de color superior característica del área */}
+                    <div
+                        className={styles.colorBar}
+                        style={{ backgroundColor: areaColors[currentArea.name] }}
+                    />
                     <h2 className={styles.areaTitle}>
                         ÁREA: {currentArea.name}
                     </h2>

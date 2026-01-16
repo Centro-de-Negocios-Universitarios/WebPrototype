@@ -11,9 +11,10 @@ export default function RecruitmentForm() {
 
     // Mapeo de colores por área
     const areaColors: { [key: string]: string } = {
-        "TECNOLOGÍA": "#FF8C42", // Naranja
-        "OPERACIONES": "#9B59B6", // Morado
-        "RECURSOS HUMANOS": "#E74C3C" // Rojo
+        "TECNOLOGÍA": "#fe846d", // Naranja
+        "OPERACIONES": "#ff91f4", // Morado
+        "RECURSOS HUMANOS": "#ffbc53", // Amarillo
+        "MARKETING": "#93dfff" // Azul turquesa
     };
 
     const areas = [
@@ -35,22 +36,37 @@ export default function RecruitmentForm() {
         {
             name: "OPERACIONES",
             position: "AUXILIAR DE PLANEACIÓN DE PROYECTOS",
-            description: "Planea y mantén proyectos en marcha de forma eficiente y organizada."
+            description: "Colaborar en la elaboración y actualización de planes, cronogramas y asignación de recursos del proyecto. Facilitar la comunicación entre los equipos, recopilar y analizar información básica para la toma de decisiones, dar seguimiento a la implementación de mejoras sugeridas por Experiencia de Usuario y elaborar informes finales con insights, resultados y recomendaciones para futuras ediciones."
         },
         {
             name: "OPERACIONES",
             position: "AUXILIAR DE LOGÍSTICA",
-            description: "Gestiona y garantiza la ejecución de operaciones en estádares óptimos, previendo cambios inesperados."
+            description: "Contactar y dar seguimiento a ponentes, redactar documentación para el préstamo de espacios, instalaciones, mobiliario y materiales. Gestionar la disponibilidad de recursos mediante planes de contingencia, dar seguimiento a los préstamos requeridos y realizar el inventario de los recursos existentes."
         },
         {
             name: "OPERACIONES",
             position: "AUXILIAR DE EXPERIENCIA DEL USUARIO",
-            description: "Recopila la experiencias de los usuarios para mejorar la calidad de los procesos y servicios."
+            description: "Recabar y analizar la experiencia de ponentes, participantes y stakeholders mediante encuestas, entrevistas y retroalimentación. Generar indicadores de experiencia del usuario y compartir la información con Planeación de Proyectos para apoyar la toma de decisiones y la implementación de mejoras."
         },
         {
             name: "RECURSOS HUMANOS",
             position: "AUXILIAR DE GESTIÓN DE TALENTO",
-            description: "Persona encargada de apoyar en el reclutamiento, selección, capacitación y seguimiento de los miembros del CNU. Apoyo en el proceso de reclutamiento y selección, y onboarding de los miembros. Apoyar en las capacitaciones a los miembros del CNU Seguimiento a los miembros y áreas para DNC Apoyo en el proceso de offboarding de los miembros del CNU."
+            description: "Apoyar en los procesos de reclutamiento, selección, onboarding y offboarding de los miembros del CNU. Colaborar en capacitaciones, desarrollo y seguimiento de integrantes y áreas para la detección de necesidades de capacitación y diagnóstico organizacional. Apoyar en la planeación de reuniones de integración y en el fortalecimiento de la comunicación interna."
+        },
+        {
+            name: "MARKETING",
+            position: "CONTENT MANAGER",
+            description: "Apoyar en los procesos de reclutamiento, selección, onboarding y offboarding de los miembros del CNU. Colaborar en capacitaciones, desarrollo y seguimiento de integrantes y áreas para la detección de necesidades de capacitación y diagnóstico organizacional. Apoyar en la planeación de reuniones de integración y en el fortalecimiento de la comunicación interna."
+        },
+        {
+            name: "MARKETING",
+            position: "COMMUNITY MANAGER",
+            description: "Gestionar las redes sociales del CNU mediante la creación de parrillas de contenido para la difusión de proyectos. Brindar atención y resolver consultas de la comunidad, monitorear conversaciones y analizar métricas de desempeño, así como organizar y promocionar eventos virtuales para fortalecer la participación de la comunidad."
+        },
+        {
+            name: "MARKETING",
+            position: "RELACIONES PÚBLICAS",
+            description: "Apoyar en la planeación y ejecución de estrategias de relaciones públicas para promover la imagen y proyectos del CNU. Difundir eventos y elaborar materiales promocionales, asistir y gestionar invitaciones a eventos de emprendimiento, desarrollar alianzas y patrocinios, y elaborar reportes de alcance en redes sociales para su presentación a patrocinadores y stakeholders."
         }
     ];
 
@@ -105,7 +121,7 @@ export default function RecruitmentForm() {
 
                 <div
                     className={`${styles.areaCard} ${animationDirection === 'left' ? styles.slideLeft :
-                            animationDirection === 'right' ? styles.slideRight : ''
+                        animationDirection === 'right' ? styles.slideRight : ''
                         }`}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}

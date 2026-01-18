@@ -51,7 +51,7 @@ export default function Navbar() {
                 <Link href="/proyectos" className={styles.navLink} onClick={closeMenu}>
                     Proyectos
                 </Link>
-                <Link href="/unete-al-equipo" className={styles.navLink} onClick={closeMenu}>
+                <Link href="/unete-al-equipo" className={`${styles.navLink} ${styles.specialButton}`} onClick={closeMenu}>
                     Únete al Equipo
                 </Link>
             </nav>
